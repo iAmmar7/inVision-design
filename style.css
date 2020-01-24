@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Muli', sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.container > .left-change,
+.container > .right-change {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.container > .left-change {
+  left: -90px;
+  background-color: #e0e0e0;
+}
+
+.container > .right-change {
+  left: 0;
+  right: -90px;
+  margin-left: auto;
+  background-color: #2463e1;
+}
+
+.container > .left-change:hover {
+  background-color: #bebebe;
+  left: -60px;
+}
+
+.container > .right-change:hover {
+  background-color: #1e53bd;
+  right: -60px;
+}
+
+.container > .left-change:hover > i,
+.container > .right-change:hover > i {
+  display: initial;
+}
+
+.container > .left-change > i,
+.container > .right-change > i {
+  position: relative;
+  top: 35%;
+  color: #fff;
+  font-size: 36px;
+  display: none;
+}
+.container > .left-change > i {
+  left: 20%;
+}
+
+.container > .right-change > i {
+  right: 20%;
+}
+
+/* --------------------- Left Container ------------------------- */
+.container > .left-container {
+  /* width: 70%; */
+  flex-basis: 70%;
+  background-color: #f9f9f9;
+  margin: 2em;
+}
+
+.left-container > .stepper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.left-container > .stepper > p {
+  margin-right: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.left-container > .stepper > div {
+  border-radius: 50%;
+  background-color: #000;
+  height: 5px;
+  width: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.left-container > .stepper > .dot-2,
+.left-container > .stepper > .dot-3 {
+  background-color: grey;
+}
+
+.left-container > .center-div {
+  margin-top: 6em;
+}
+
+.center-div > .center-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.center-div > .center-form > h1 {
+  margin-bottom: 1em;
+}
+
+.center-div > .center-form > p > a {
+  font-weight: 700;
+}
+
+.center-div > .center-form > form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.center-div > .center-form > form > input {
+  padding: 10px 16px;
+  margin-bottom: 2em;
+  font-size: 15px;
+  border: 1px solid rgb(212, 212, 212);
+}
+
+.center-div > .center-form > form > select {
+  padding: 10px 16px;
+  margin-bottom: 2em;
+  font-size: 16px;
+  border: 1px solid rgb(212, 212, 212);
+  color: grey;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(https://visualpharm.com/assets/471/Expand%20Arrow-595b40b65ba036ed117d1118.svg)
+    96% / 3% no-repeat #fff;
+}
+
+.center-div > .center-form > form > .input-icon {
+  position: relative;
+  width: 100%;
+}
+.center-div > .center-form > form > .input-icon > .icon {
+  position: absolute;
+  right: 4%;
+  top: 12px;
+  cursor: pointer;
+}
+.center-div > .center-form > form > .input-icon > input {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 15px;
+  border: 1px solid rgb(212, 212, 212);
+}
+.center-div > .center-form > form > .input-icon > div {
+  margin: 1em 0em 2em 0em;
+  font-size: 12px;
+  color: grey;
+}
+
+.center-div > .center-form > form > button {
+  padding: 10px 16px;
+  cursor: pointer;
+  background-color: #ededed;
+  border: 1px solid rgb(212, 212, 212);
+  font-size: 14px;
+  font-weight: 700;
+  color: #aaaaaa;
+}
+
+.center-div > .center-form > .terms-div {
+  margin-top: 2em;
+}
+
+.center-div > .center-form > .terms-div > p {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 0.7cm;
+}
+.center-div > .center-form > .terms-div > p > span {
+  color: #286efa;
+}
+
+@media screen and (max-width: 890px) {
+  .center-div > .center-form {
+    width: 70%;
+  }
+}
+
+/* --------------------- Right Container ------------------------- */
+.container > .right-container {
+  background-color: #286efa;
+  flex-basis: 30%;
+  /* width: 30%; */
+}
+
+.right-container > .center-div {
+  width: 80%;
+  margin: 50% auto 0em auto;
+  color: #fff;
+}
+.right-container > .center-div > h1 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* --------------- Media Queries ---------------- */
+@media screen and (max-width: 650px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .container > .right-container > .center-div {
+    margin: 2em auto 4em auto;
+  }
+
+  .container > .right-change {
+    background-color: #e0e0e0;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .container > .left-container > .center-div > .center-form {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .container > .left-container > .center-div > .center-form {
+    width: 96%;
+  }
+}
