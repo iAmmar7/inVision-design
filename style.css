@@ -114,8 +114,9 @@ h1 {
   margin-left: 5px;
 }
 
-.left-container > .stepper > .dot-2,
-.left-container > .stepper > .dot-3 {
+.left-container > .stepper > #dot-1,
+.left-container > .stepper > #dot-2,
+.left-container > .stepper > #dot-3 {
   background-color: grey;
 }
 
@@ -235,7 +236,7 @@ h1 {
 @media screen and (max-width: 650px) {
   .container {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .container > .right-container > .center-div {
